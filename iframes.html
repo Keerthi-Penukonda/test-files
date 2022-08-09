@@ -1,0 +1,18 @@
+<!-- HTML tag have A11y viloation-->
+<html>
+<head>
+    <title>IFrame A11Y issues</title>
+</head>
+<body>
+    <!--A11Y violation :: -->
+    <iframe srcdoc="<button>Click me</button>" tabindex="-1" title="My frame is an iframe"></iframe>
+    <!-- No issue-->
+    <iframe srcdoc="<button>Submit</button>" tabindex="1"></iframe>
+    <!--Best practice-->
+    <iframe title="Intentionally blank-1" src="http://bit.ly/2cfBoyE" width="120" height="50">
+    </iframe>
+    <!--Best practice-->
+    <iframe title="Intentionally blank-2" src="http://bit.ly/2cfBoyE" width="120" height="50">
+    </iframe>
+</body>
+</html>

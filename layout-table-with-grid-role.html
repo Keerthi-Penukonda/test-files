@@ -1,38 +1,38 @@
 <html lang="en">
 <head>
-    <title>Layout table - Using table role</title>
+    <title>Layout table - Using grid role</title>
     <style>
     .annotate {
   font-style: italic;
   color: #366ed4;
 }
 
-[role="table"] {
+[role="grid"] {
   display: table;
 }
 
-[role="table"] > div[id] {
+[role="grid"] > div[id] {
   display: table-caption;
   font-style: italic;
 }
 
-[role="table"] [role="row"] {
+[role="grid"] [role="row"] {
   display: table-row;
 }
 
-[role="table"] [role="cell"],
-[role="table"] [role="columnheader"] {
+[role="grid"] [role="cell"],
+[role="grid"] [role="columnheader"] {
   display: table-cell;
   padding: 0.125em 0.25em;
   width: 8em;
 }
 
-[role="table"] [role="columnheader"] {
+[role="grid"] [role="columnheader"] {
   font-weight: bold;
   border-bottom: thin solid #888;
 }
 
-[role="table"] [role="rowgroup"]:last-child [role="row"]:nth-child(odd) {
+[role="grid"] [role="rowgroup"]:last-child [role="row"]:nth-child(odd) {
   background-color: #ddd;
 }
 </style>
@@ -40,7 +40,7 @@
 <body>
     <h1>Layout tables</h1>
     <h2>Layout table - with all aria roles<h2>
-        <div role="table" aria-label="User information" aria-describedby="info">
+        <div role="grid" aria-label="User information" aria-describedby="info">
             <div id="info">User information using aria table roles</div>
             <div role="rowgroup">
               <div role="row">

@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <title>Layout table - Using table role</title>
+    <style>
+    .annotate {
+  font-style: italic;
+  color: #366ed4;
+}
+
+[role="table"] {
+  display: table;
+}
+
+[role="table"] > div[id] {
+  display: table-caption;
+  font-style: italic;
+}
+
+[role="table"] [role="row"] {
+  display: table-row;
+}
+
+[role="table"] [role="cell"],
+[role="table"] [role="columnheader"] {
+  display: table-cell;
+  padding: 0.125em 0.25em;
+  width: 8em;
+}
+
+[role="table"] [role="columnheader"] {
+  font-weight: bold;
+  border-bottom: thin solid #888;
+}
+
+[role="table"] [role="rowgroup"]:last-child [role="row"]:nth-child(odd) {
+  background-color: #ddd;
+}
+</style>
+</head>
+<body>
+    <h1>Layout tables</h1>
+    <h2>Layout table - with all aria roles<h2>
+        <div role="table" aria-label="User information" aria-describedby="info">
+            <div id="info">User information using aria table roles</div>
+            <div role="rowgroup">
+              <div role="row">
+                <span role="columnheader" colspan="2">User Details</span>
+              </div>
+            </div>
+            <div role="rowgroup">
+              <div role="row">
+                <span role="cell">Name</span>
+                <span role="cell">John</span>
+              </div>
+              <div role="row">
+                <span role="cell">Age</span>
+                <span role="cell"> 30</span>
+              </div>
+              <div role="row">Address</span>
+              <div role="row">1-546, Test Address</span>
+              </div>
+              <div role="row">
+                <span role="cell">Zipcode </span>
+                <span role="cell">32818</span>
+              </div>
+            </div>
+          </div>
+</body>
+</html>

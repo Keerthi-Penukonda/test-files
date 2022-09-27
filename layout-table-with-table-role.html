@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <title>Layout table - Using table role</title>
+    <style>
+    .annotate {
+  font-style: italic;
+  color: #366ed4;
+}
+
+[role="table"] {
+  display: table;
+}
+
+[role="table"] > div[id] {
+  display: table-caption;
+  font-style: italic;
+}
+
+[role="table"] [role="row"] {
+  display: table-row;
+}
+
+[role="table"] [role="cell"],
+[role="table"] [role="columnheader"] {
+  display: table-cell;
+  padding: 0.125em 0.25em;
+  width: 8em;
+}
+
+[role="table"] [role="columnheader"] {
+  font-weight: bold;
+  border-bottom: thin solid #888;
+}
+
+[role="table"] [role="rowgroup"]:last-child [role="row"]:nth-child(odd) {
+  background-color: #ddd;
+}
+</style>
+</head>
+<body>
+    <h1>Layout tables</h1>
+    <h2>Layout table - with all aria roles<h2>
+        <div role="table" aria-label="User information" aria-describedby="info">
+            <div id="info">User information using aria table roles</div>
+            <div role="rowgroup">
+              <div role="row">
+                <span role="columnheader" colspan="1">User Details</span>
+              </div>
+            </div>
+            <div role="rowgroup">
+              <div role="row">
+                <span role="cell"> <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname"><br><br></span>
+                <span role="cell">  <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname"><br><br></span>
+              </div>
+              <div role="row">
+                <span role="cell"> <label for="company">Company:</label>
+                    <input type="text" id="company" name="company"><br></span>
+                <span role="cell">
+                    <label for="Address">Address:</label>
+                    <input type="text" id="Address" name="Address"><br><br></span>
+              </div>
+              <div role="row">
+                <span role="cell"> <label for="city">City:</label>
+                <input type="text" id="city" name="city"><br><br>
+                </span>
+                <span role="cell"> <label for="state">State</label>
+                <input type="text" id="state" name="state"><br><br></span>
+              </div>
+              <div role="row">
+                <span role="cell"> <label for="telephone">Telephone:</label>
+                    <input type="number" id="telephone" name="telephone"><br><br>
+                </span>
+                <span role="cell">   <label for="email">Email:</label>
+                    <input type="email" id="state" name="email"><br><br></span>
+              </div>
+            </div>
+          </div>
+</body>
+</html>

@@ -6,9 +6,17 @@
     <body>
        <h1>Different types of forms</h1> 
        <h2>Label as a placeholder</h2>
-       <form >
+       <form id="placeholder">
         <input type="text" name="first name" placeholder="First Name" ><br><br>
         <input type="submit">
       </form>
+        <form id="incorrect-label">
+       <label for="fname">Last name:</label>
+       <input type="text" id="fname" name="first name"><br><br>
+       <label for="lname">First name:</label>
+       <input type="text" id="lname" placeholder="Please enter last name" name="last name"><br><br>
+       <input type="submit" value="Submit">
+      </form>
+
     </body>
 </html>

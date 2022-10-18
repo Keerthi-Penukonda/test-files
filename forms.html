@@ -6,22 +6,17 @@
             {
                 var firstName=document.getElementById('firstname').value;
                 var fError=document.getElementById('fNameError')
-                if(firstName.length==0)
-                {
-                    fError.textContent="First name should not be empty"
-                     return false
-                }
                 var lastName=document.getElementById('lastname').value;
                 var lError=document.getElementById('lNameError')
                 if(firstName.length==0)
                 {
                     fError.textContent="First name should not be empty"
                 }
-                 if(lastName.length==0)
+                if(lastName.length==0)
                 {
                     lError.textContent="Last name should not be empty"
                 }
-                    return false
+                return false
             }
         </script>
     </head>

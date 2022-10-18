@@ -6,19 +6,11 @@
             {
                 var firstName=document.getElementById('firstname').value;
                 var fError=document.getElementById('fNameError')
-                var lastName=document.getElementById('lastname').value;
-                var lError=document.getElementById('lNameError')
                 if(firstName.length==0)
                 {
                     fError.textContent="First name should not be empty"
+                     return false
                 }
-                if(lastName.length==0)
-                {
-                    lError.textContent="Last name should not be empty"
-                }
-                return false
-
-
             }
         </script>
     </head>
@@ -28,8 +20,7 @@
        <form id="placeholder" onsubmit="return validate()">
         <span id="fNameError" style="color: red;"></span><br>
         <input type="text" id="firstname" name="first name" placeholder="First Name" ><br>
-        <span id="lNameError" style="color: red;"></span><br>
-        <input type="text" id="lastname" name="last name" placeholder="Last Name" ><br><br>
+        <input type="text" id="lastname" name="last name" placeholder="Last Name" aria-required="true"><br><br>
         <button>Submit</button>
       </form>
         <br>
@@ -40,7 +31,7 @@
            <label for="lname">First name *:</label>
            <input type="text" id="lname" placeholder="Please enter last name" name="last name" aria-required="true"><br><br>
            <label for="unknown">Unknown</label>
-           <input type="text" id="unknown" placeholder="Please enter some text" name="unknown" aria-required="true"><br><br>
+           <input type="text" id="unknown" placeholder="Please enter some text" name="unknown" ><br><br>
           <input type="submit" value="Submit">
         </form>
 

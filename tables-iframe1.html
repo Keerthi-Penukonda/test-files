@@ -6,8 +6,13 @@
 <body>
 
 <h1>Tables in nested iframe</h1>
-  <h2>Header markup for data cells</h2>
-    <tbody><tr>
+ 
+     <h2>Irregular headers without header markup</h2>
+    <table id="irregular-header-missing-header-markup">
+        <col>
+        <colgroup span="2"></colgroup>
+        <colgroup span="2"></colgroup>
+        <tr>
           <td rowspan="2"></td>
           <td colspan="2" scope="colgroup">Mars</td>
           <td colspan="2" scope="colgroup">Venus</td>
@@ -32,6 +37,6 @@
           <td>12,000</td>
           <td>9,000</td>
         </tr>
-      </tbody>
+      </table>
 </body>
 </html>

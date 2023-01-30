@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <style>
+            #modal-backdrop {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                display: none;
+            }
+
+            #modal-content {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: white;
+                padding: 1rem;
+                border-radius: 4px;
+                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <template id="modal-template">
+            <style>
+                #modal-trigger {
+                    padding: 1rem;
+                    background-color: lightgray;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+            </style>
+            <button id="modal-trigger">Open Modal</button>
+            <div id="modal-backdrop"></div>
+            <div id="modal-content">
+                <p>This is the modal content</p>
+                <button id="modal-close">Close</button>
+            </div>
+        </template>
+        <script>
+            const modalTemplate = document.querySelector('#modal-template');
+            const shadowRoot = document.body.attachShadow({ mode: 'open' });
+            shadowRoot.appendChild(modalTemplate.content.cloneNode(true));
+            const modalTrigger = shadowRoot.querySelector('#modal-trigger');
+            const modalBackdrop = shadowRoot.querySelector('#modal-backdrop');
+            const modalContent = shadowRoot.querySelector('#modal-content');
+            const modalClose = shadowRoot.querySelector('#modal-close');
+            modalTrigger.addEventListener('click', () => {
+                modalBackdrop.style.display = 'block';
+                modalContent.style.display = 'block';
+            });
+            modalClose.addEventListener('click', () => {
+                modalBackdrop.style.display = 'none';
+                modalContent.style.display = 'none';
+            });
+        </script>
+    </body>
+
+</html>
